@@ -18,8 +18,8 @@ namespace Site01.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Palavras = _db.Palavras.ToList();
-            return View();
+            var palavras = _db.Palavras.ToList();
+            return View(palavras);
         }
         [HttpGet]
         public IActionResult Cadastrar()
