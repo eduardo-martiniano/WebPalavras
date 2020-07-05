@@ -1,34 +1,20 @@
 ﻿@model Site01.Models.Palavra
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width" />
-    <title>Cadastrar</title>
-</head>
-<body>
-    <div class="container">
-        <form method="post">
-            <input type="hidden" name="id" value="@Model.Id"/>
-            <div class="form-group">
-                <label for="nome">Palavra</label>
-                <input type="text" name="nome" value="@Model.Nome" class="form-control" id="nome" placeholder="Nome da palavra">
-               
-            </div>
-            <div class="form-group">
-                <label for="dificuldade">Nivel de dificuldade</label>
-                <input type="text" name="dificuldade" value="@Model.Dificuldade" class="form-control" id="dificuldade" placeholder="Digite o nivel da palavra">
-                
-            </div>
-            <button type="submit" class="btn btn-success">Cadastrar</button>
-            
-        </form>
+<form method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <div class="form-group">
+        <label for="nome">Palavra</label>
+        <input type="text" name="nome" value="@Model.Nome" class="form-control" id="nome" placeholder="Nome da palavra">
 
     </div>
-</body>
-</html>
+    <div class="form-group">
+        <label for="dificuldade">Nivel de dificuldade</label>
+        <input type="text" name="dificuldade" value="@Model.Dificuldade" class="form-control" id="dificuldade" placeholder="Digite o nivel da palavra">
+
+    </div>
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+
+</form>
+

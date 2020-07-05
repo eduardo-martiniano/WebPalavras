@@ -1,21 +1,11 @@
 ﻿@model List<Site01.Models.Palavra>
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width" />
-    <title>Palavra - Listagem</title>
-</head>
-<body>
-    <div class="container">
-        <br/>
+        <br />
         <a href="/palavra/cadastrar" class="btn btn-success">Cadastrar</a>
-        <hr/>
+        <hr />
 
         <table class="table">
             <thead class="thead-dark">
@@ -27,21 +17,20 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var palavra in Model) {
+                @foreach (var palavra in Model)
+                {
 
 
-                <tr>
-                    <th scope="row">@palavra.Id</th>
-                    <td>@palavra.Nome</td>
-                    <td>@palavra.Dificuldade</td>
-                    <td>
-                        <a href="/palavra/atualizar/@palavra.Id" class="btn btn-primary">Editar</a>
-                        <a href="/palavra/excluir/@palavra.Id" class="btn btn-secondary">Excluir</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <th scope="row">@palavra.Id</th>
+                        <td>@palavra.Nome</td>
+                        <td>@palavra.Dificuldade</td>
+                        <td>
+                            <a href="/palavra/atualizar/@palavra.Id" class="btn btn-primary">Editar</a>
+                            <a href="/palavra/excluir/@palavra.Id" class="btn btn-secondary">Excluir</a>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
-    </div>
-</body>
-</html>
+

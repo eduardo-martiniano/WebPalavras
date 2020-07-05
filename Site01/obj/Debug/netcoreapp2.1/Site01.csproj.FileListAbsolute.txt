@@ -28,3 +28,4 @@ C:\Users\EDUARDO\Desktop\.NET MVC BASICO\Projeto 1\Projeto01\Site01\obj\Debug\ne
 C:\Users\EDUARDO\Desktop\.NET MVC BASICO\Projeto 1\Projeto01\Site01\obj\Debug\netcoreapp2.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\EDUARDO\Desktop\.NET MVC BASICO\Projeto 1\Projeto01\Site01\obj\Debug\netcoreapp2.1\Razor\Views\Palavra\Index.cshtml.g.cs
 C:\Users\EDUARDO\Desktop\.NET MVC BASICO\Projeto 1\Projeto01\Site01\obj\Debug\netcoreapp2.1\Razor\Views\Palavra\Cadastrar.cshtml.g.cs
+C:\Users\EDUARDO\Desktop\.NET MVC BASICO\Projeto 1\Projeto01\Site01\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
