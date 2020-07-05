@@ -24,31 +24,43 @@ namespace Site01.Controllers
         [HttpGet]
         public IActionResult Cadastrar()
         {
-            return View();
+            return View(new Palavra());
         }
+        [HttpPost]
         public IActionResult Cadastrar([FromForm] Palavra palavra)
         {
+            if (ModelState.IsValid)
+            {
+                _db.Add(palavra);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
             return View();
         }
         [HttpGet]
-        public IActionResult Atualizar()
+        public IActionResult Atualizar(int id)
         {
-            return View("Cadastrar");
+            Palavra palavra = _db.Palavras.Find(id);
+            return View("Cadastrar", palavra);
         }
         [HttpPost]
         public IActionResult Atualizar([FromForm] Palavra palavra)
         {
-            return View("Cadastrar");
+            if (ModelState.IsValid)
+            {
+                _db.Palavras.Update(palavra);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View("Cadastrar", palavra);
         }
-        public IActionResult Excluir()
+        [HttpGet]
+        public IActionResult Excluir(int id)
         {
-            return View();
-        }
-        public IActionResult Excluir([FromForm] Palavra palavra)
-        {
+            _db.Palavras.Remove(_db.Palavras.Find(id));
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
-
 
     }
 }

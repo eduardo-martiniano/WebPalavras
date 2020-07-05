@@ -1,4 +1,4 @@
-﻿
+﻿@model Site01.Models.Palavra
 @{
     Layout = null;
 }
@@ -14,14 +14,15 @@
 <body>
     <div class="container">
         <form method="post">
+            <input type="hidden" name="id" value="@Model.Id"/>
             <div class="form-group">
-                <label for="palavra">Palavra</label>
-                <input type="text" name="palavra" value="" class="form-control" id="palavra" placeholder="Nome da palavra">
+                <label for="nome">Palavra</label>
+                <input type="text" name="nome" value="@Model.Nome" class="form-control" id="nome" placeholder="Nome da palavra">
                
             </div>
             <div class="form-group">
-                <label for="nivel">Nivel de dificuldade</label>
-                <input type="text" name="nivel" value="" class="form-control" id="nivel" placeholder="Digite o nivel da palavra">
+                <label for="dificuldade">Nivel de dificuldade</label>
+                <input type="text" name="dificuldade" value="@Model.Dificuldade" class="form-control" id="dificuldade" placeholder="Digite o nivel da palavra">
                 
             </div>
             <button type="submit" class="btn btn-success">Cadastrar</button>

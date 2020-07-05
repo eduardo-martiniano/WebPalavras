@@ -52,7 +52,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(58, 319, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "70337132ff2248258326a0d41189c678", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b4b76d1a40274646ae4b0e458b928808", async() => {
                 BeginContext(64, 306, true);
                 WriteLiteral(@"
     <link rel=""stylesheet"" href=""https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"" integrity=""sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"" crossorigin=""anonymous"">
@@ -76,7 +76,7 @@ namespace AspNetCore
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(379, 1447, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d68fd5dc0471479b8438fa1db81bee20", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d79e5472cdf24a3695bfab7ae206ffda", async() => {
                 BeginContext(385, 226, true);
                 WriteLiteral("\r\n    <div class=\"container\">\r\n        <form method=\"post\" action=\"/contato/recebercontato\">\r\n            <div class=\"form-group\">\r\n                <label for=\"nome\">Nome</label>\r\n                <input type=\"text\" name=\"nome\"");
                 EndContext();
