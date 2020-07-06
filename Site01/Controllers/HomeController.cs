@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Site01.Models;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,16 @@ namespace Site01.Controllers
             {
                 if (usuario.Email == "eduardo@gmail.com" && usuario.Senha == "123" )
                 {
+                    ////Add Session
+                    //HttpContext.Session.SetString("Login", "true");
+                    //HttpContext.Session.SetInt32("UserID", 32);
+
+                    ////Ler Session
+                    //string login = HttpContext.Session.GetString("Login");
+
+                    HttpContext.Session.SetString("Login", "true");
                     return Redirect("/palavra");
+
                 }
                 else
                 {
@@ -39,6 +49,12 @@ namespace Site01.Controllers
                 return View();
             }
             
+        }
+        public ActionResult sair()
+        {
+            HttpContext.Session.Clear();
+
+            return RedirectToAction("Index","Home");
         }
 
     }

@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    string Login = Context.Session.GetString("Login");
+}
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -19,15 +24,28 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/palavra">Palavras</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contato">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/home/login">Login</a>
-                        </li>
+
+                        @if (Login != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/palavra">Palavras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/sair">Sair</a>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contato">Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home/login">Login</a>
+                            </li>
+
+                        }
+
                     </ul>
                 </div>
             </nav>
@@ -35,13 +53,13 @@
 
 
         </header>
-       
-        
+
+
         <div>
             @RenderBody()
 
         </div>
-                
+
         <footer>
             <div class="row">
                 <div class="col-sm-12">
@@ -53,6 +71,6 @@
         </footer>
 
     </div>
-    
+
 </body>
 </html>
