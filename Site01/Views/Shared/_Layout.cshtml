@@ -22,26 +22,30 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">INICIO<span class="sr-only">(current)</span></a>
                         </li>
 
                         @if (Login != null)
                         {
                             <li class="nav-item">
-                                <a class="nav-link" href="/palavra">Palavras</a>
+                                <a class="nav-link" href="/palavra">PALAVRAS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contato">CONTATO</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/home/sair">Sair</a>
+                                <a class="nav-link" href="/home/sair">SAIR</a>
                             </li>
 
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link" href="/contato">Contato</a>
+                                <a class="nav-link" href="/contato">CONTATO</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/home/login">Login</a>
+                                <a class="nav-link" href="/home/login">LOGIN</a>
                             </li>
 
                         }

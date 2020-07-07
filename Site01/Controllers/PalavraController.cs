@@ -35,6 +35,9 @@ namespace Site01.Controllers
             {
                 _db.Add(palavra);
                 _db.SaveChanges();
+
+                TempData["Mensagem"] = "A palavra foi cadastrada com sucesso!";
+
                 return RedirectToAction("Index");
             }
             return View();
@@ -52,6 +55,9 @@ namespace Site01.Controllers
             {
                 _db.Palavras.Update(palavra);
                 _db.SaveChanges();
+
+                TempData["Mensagem"] = "A palavra foi atualizada com sucesso!";
+
                 return RedirectToAction("Index");
             }
             return View("Cadastrar", palavra);
@@ -61,6 +67,8 @@ namespace Site01.Controllers
         {
             _db.Palavras.Remove(_db.Palavras.Find(id));
             _db.SaveChanges();
+
+            TempData["Mensagem"] = "A palavra foi excluida com sucesso!";
             return RedirectToAction("Index");
         }
 
