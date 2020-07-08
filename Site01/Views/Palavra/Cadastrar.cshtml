@@ -7,11 +7,34 @@
     <div class="form-group">
         <label for="nome">Palavra</label>
         <input type="text" name="nome" value="@Model.Nome" class="form-control" id="nome" placeholder="Nome da palavra">
-
+        @Html.ValidationMessage("nome")
     </div>
     <div class="form-group">
-        <label for="dificuldade">Nivel de dificuldade</label>
-        <input type="text" name="dificuldade" value="@Model.Dificuldade" class="form-control" id="dificuldade" placeholder="Digite o nivel da palavra">
+        @*<label for="dificuldade">Nivel de dificuldade</label>
+        <input type="text" name="dificuldade" value="@Model.Dificuldade" class="form-control" id="dificuldade" placeholder="Digite o nivel da palavra">*@
+
+        <div class="form-group">
+            <label for="nivel">Nivel de dificuldade</label>
+            <select name="dificuldade" class="form-control">
+                @foreach (var e in ViewBag.Nivel)
+                {
+                    @if (e.Id == Model.Dificuldade)
+                    {
+                        <option value="@e.Id" selected>@e.Nome</option>
+                    }
+                    else
+                    {
+                        <option value="@e.Id">@e.Nome</option>
+                    }
+
+                }
+            </select>
+        </div>
+
+
+
+
+
 
     </div>
     <button type="submit" class="btn btn-success">Cadastrar</button>
